@@ -10,6 +10,8 @@ import java.util.List;
 
 public class testcases {
 
+    private static Object wait;
+
     public static void main(String[] args) {
         WebDriver driver = null;
         WebDriverWait wait = null;
@@ -141,9 +143,9 @@ public class testcases {
                             WebElement checkEligibilityButton = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type='button']")));
 
                           // Scroll to button and click
-                          ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", checkEligibilityButton);
+                          ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", checkEligibilityButton);
                           Thread.sleep(2000);
-                           ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", checkEligibilityButton);
+                           ((JavascriptExecutor) driver).executeScript("arguments[0].click();", checkEligibilityButton);
                           System.out.println("✅ 'Check eligibility for FREE' button clicked successfully");
 
                           // Wait for OTP screen to appear
@@ -154,7 +156,7 @@ public class testcases {
                            e.printStackTrace();
                      }
 
-            // Test Case 5: Handle OTP Screen
+            // Test Case 8: Handle OTP Screen
             System.out.println("\n=== Test Case 5: Handle OTP Screen ===");
 
             try {
@@ -235,16 +237,24 @@ public class testcases {
                 e.printStackTrace();
             }
 
-            // Test Case 8: Click on edit button
-            System.out.println("\n=== Test Case 8: Click on edit button ===");
+            // Test Case 8: Click on edit button and successfully navigate back to the previous screen
+            System.out.println("\n=== Test Case 8: Click on edit button and successfully navigate back to the previous screen ===");
             try {
-                WebElement labelElement = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".mfcInit_label2_3__VFG0w")));
+                WebElement labelElement =  wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//span[@class='mfcInit_label2_3__VFG0w']"))));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", labelElement);
                 Thread.sleep(1000);
                 labelElement.click();
-                System.out.println("✅ click on edit button");
+                Thread.sleep(5000);
+                WebElement confirmationElement =driver.findElement(By.xpath("//div[contains(text(),'No impact on CIBIL score')]"));
+                if (confirmationElement.isDisplayed()) {
+                    System.out.println("✅ Successfully navigated back to previous page after clicking edit");
+                } else {
+                    System.out.println("❌ Could not verify navigation to previous page");
+                }
+
+                Thread.sleep(2000);
             } catch (Exception e) {
-                System.out.println("❌ Failed to click on edit: " + e.getMessage());
+                System.out.println("❌ Failed to click on edit or verify navigation: " + e.getMessage());
             }
 
             // Test Summary
