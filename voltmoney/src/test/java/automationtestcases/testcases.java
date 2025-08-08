@@ -237,8 +237,8 @@ public class testcases {
                 e.printStackTrace();
             }
 
-            // Test Case 8: Click on edit button and successfully navigate back to the previous screen
-            System.out.println("\n=== Test Case 8: Click on edit button and successfully navigate back to the previous screen ===");
+            // Test Case 9: Click on edit button and successfully navigate back to the previous screen
+            System.out.println("\n=== Test Case 9: Click on edit button and successfully navigate back to the previous screen ===");
             try {
                 WebElement labelElement =  wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//span[@class='mfcInit_label2_3__VFG0w']"))));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", labelElement);
