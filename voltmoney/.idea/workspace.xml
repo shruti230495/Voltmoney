@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c533a2ed-4423-4a24-99d1-64e00c93a2fd" name="Changes" comment="Automation third commit">
+    <list default="true" id="c533a2ed-4423-4a24-99d1-64e00c93a2fd" name="Changes" comment="Automation 5th commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/automationtestcases/testcases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/automationtestcases/testcases.java" afterDir="false" />
     </list>
@@ -77,7 +77,7 @@
       <updated>1754556271872</updated>
       <workItem from="1754556273004" duration="1511000" />
       <workItem from="1754596061491" duration="714000" />
-      <workItem from="1754598913370" duration="25497000" />
+      <workItem from="1754598913370" duration="29397000" />
     </task>
     <task id="LOCAL-00001" summary="First commit with 2 test cases &#10;1.page load successful &#10;2.text validation">
       <option name="closed" value="true" />
@@ -127,7 +127,23 @@
       <option name="project" value="LOCAL" />
       <updated>1754640778285</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Automation 4th commit">
+      <option name="closed" value="true" />
+      <created>1754681999071</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1754681999071</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Automation 5th commit">
+      <option name="closed" value="true" />
+      <created>1754682352840</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1754682352840</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,7 +180,9 @@
     <MESSAGE value="First commit with 2 test cases &#10;1.page load successful &#10;2.text validation" />
     <MESSAGE value="second commit with 3 test cases" />
     <MESSAGE value="Automation third commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Automation third commit" />
+    <MESSAGE value="Automation 4th commit" />
+    <MESSAGE value="Automation 5th commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Automation 5th commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

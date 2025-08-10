@@ -131,7 +131,7 @@ public class testcases {
                     System.out.println("❌ PAN format is invalid and was not entered: " + validPAN);
                 }
             } catch (Exception e) {
-                System.out.println("Error in Test Case 4.6: " + e.getMessage());
+                System.out.println("Error in Test Case 6: " + e.getMessage());
             }
             // Test Case 7:Click "Check eligibility for FREE" button
                         System.out.println("\n=== Test Case 7: Click 'Check eligibility for FREE' button ===");
@@ -157,7 +157,7 @@ public class testcases {
                      }
 
             // Test Case 8: Handle OTP Screen
-            System.out.println("\n=== Test Case 5: Handle OTP Screen ===");
+            System.out.println("\n=== Test Case 8: Handle OTP Screen ===");
 
             try {
                 WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(15));
@@ -255,6 +255,20 @@ public class testcases {
                 Thread.sleep(2000);
             } catch (Exception e) {
                 System.out.println("❌ Failed to click on edit or verify navigation: " + e.getMessage());
+            }
+            // Test Case 10: Get Name of header links on the page
+            System.out.println("\n=== Test Case 10: Count header links on the page ===");
+            try {
+                List<WebElement> headerLinks = driver.findElements(By.className("header_headerRightWebContent__lXq0E"));
+
+                // Print the text of each header link
+                for (WebElement link : headerLinks) {
+                    System.out.println("🔗 " + link.getText());
+
+                }
+
+            } catch (Exception e) {
+                System.out.println("❌ Failed to find header links: " + e.getMessage());
             }
 
             // Test Summary
